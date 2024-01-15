@@ -52,5 +52,9 @@ php artisan websockets:serve
 
 Go to `http://localhost:8000` to see the application in action.
 
-I hope this helps you create a readme.md file for your repository. 😊
+# Applied Security Measures
+
+## 1. Authentication
+
+
 
