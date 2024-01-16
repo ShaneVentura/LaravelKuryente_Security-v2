@@ -14,12 +14,12 @@ use Illuminate\Support\Facades\Route;
 // rate limit login attempts
 Route::middleware(['guest'])->group(function () {
     Route::get('register', [RegisteredUserController::class, 'create'])
-                ->name('register')->middleware('throttle:5,1');
-
+                ->name('register')->middleware('throttle:2,1');
+// 
     Route::post('register', [RegisteredUserController::class, 'store']);
 
     Route::get('login', [AuthenticatedSessionController::class, 'create'])
-                ->name('login')->middleware('throttle:5,1');
+                ->name('login')->middleware('throttle:2,1');
     Route::post('login', [AuthenticatedSessionController::class, 'store']);
 
     Route::get('forgot-password', [PasswordResetLinkController::class, 'create'])
